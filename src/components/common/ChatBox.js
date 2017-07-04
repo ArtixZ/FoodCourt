@@ -25,9 +25,10 @@ const ChatBox = ({ value, onChangeText, placeholder, onSend }) => {
 
 const styles = {
   containerStyle: {
-    height: 40,
+    height: 20,
     flex: 1,
     flexDirection: 'row',
+    alignSelf: 'flex-end',
     alignItems: 'center',
     justifyContent: 'flex-start'
   },
