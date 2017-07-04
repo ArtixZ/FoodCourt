@@ -3452,6 +3452,11 @@
       "from": "react-native-experimental-navigation@>=0.26.0 <0.27.0",
       "resolved": "https://registry.npmjs.org/react-native-experimental-navigation/-/react-native-experimental-navigation-0.26.12.tgz"
     },
+    "react-native-keyboard-aware-scroll-view": {
+      "version": "0.2.9",
+      "from": "react-native-keyboard-aware-scroll-view@latest",
+      "resolved": "https://registry.npmjs.org/react-native-keyboard-aware-scroll-view/-/react-native-keyboard-aware-scroll-view-0.2.9.tgz"
+    },
     "react-native-router-flux": {
       "version": "3.35.0",
       "from": "react-native-router-flux@3.35.0",
