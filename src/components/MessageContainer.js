@@ -21,7 +21,7 @@ class MessageContainer extends Component {
             {
                 msg_id: '5I02W-16-8278a', 
                 timestamp: 1403099033211, 
-                direction: 'outgoing',
+                direction: 'ingoing',
                 body: {
                     type: 'txt', 
                     msg: 'Received. Parsing...',
