@@ -2,12 +2,11 @@ import React  from 'react';
 import { Text } from 'react-native';
 
 const MessageBubble = ({ id, outOrIn, timestamp, body }) => {
-    console.log(body)
     
     const { type } = body;
     const { textStyle } = styles;
     const leftOrRight = outOrIn === 'outgoing' ? 'flex-end' : 'flex-start';
-    switch(type) {
+    switch (type) {
         case 'txt': 
             return (
                 <Text 

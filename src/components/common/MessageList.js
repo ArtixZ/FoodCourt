@@ -5,12 +5,18 @@ import { MessageBubble } from './';
 class MessageList extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
         const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
         this.state = {
             dataSource: ds.cloneWithRows(props.messages),
         };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.messages !== this.props.messages) {
+            const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+            this.setState({ dataSource: ds.cloneWithRows(nextProps.messages) });
+        }
     }
 
     renderRow(rowData) {
@@ -25,6 +31,7 @@ class MessageList extends Component {
         ); 
     }
 
+
     render() {
         const styles = {
             MessageListStyle: {
@@ -35,6 +42,7 @@ class MessageList extends Component {
         };
         return (
             <ListView 
+                enableEmptySections
                 style={styles.MessageListStyle}
                 dataSource={this.state.dataSource}
                 renderRow={this.renderRow.bind(this)}

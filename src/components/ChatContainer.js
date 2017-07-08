@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { ChatBox } from './common';
+import { connect } from 'react-redux';
+import { messageSent } from '../actions';
 
 class ChatContainer extends Component {
     state = {
@@ -7,11 +9,14 @@ class ChatContainer extends Component {
     }
 
     onChangeInput(val) {
-        debugger;
+        this.setState({ inputVal: val });
     }
     
     onSend() {
-        debugger
+        if (this.state.inputVal) {
+            this.props.messageSent(this.state.inputVal);        
+            this.setState({ inputVal: null });
+        }
     }
 
     render() {
@@ -26,4 +31,7 @@ class ChatContainer extends Component {
     }
 }
 
-export default ChatContainer;
+
+export default connect(null, {
+    messageSent
+})(ChatContainer);
