@@ -4,8 +4,17 @@ import {
     TXT_CHAT_MESSAGE,
 } from '../actions/types';
 
+const INIT_STATE = [{
+    msg_id: `temp_${generateGuuId()}`,
+    timeStamp: moment().toISOString(),
+    direction: 'ingoing',
+    body: {
+        type: 'txt',
+        msg: 'What can I get for you?'
+    }
+}]
 
-export default (state = [], action) => {
+export default (state = INIT_STATE, action) => {
     switch (action.type) {
         case TXT_CHAT_MESSAGE:
             const message = generateTxtMsg(action.payload);

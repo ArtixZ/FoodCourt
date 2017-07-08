@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ListView, Text } from 'react-native';
-import { MessageBubble } from './';
+import { ListView, Text, ScrollView } from 'react-native';
+import { MessageBubble, CardSection } from './';
 
 class MessageList extends Component {
     constructor(props) {
@@ -22,12 +22,15 @@ class MessageList extends Component {
     renderRow(rowData) {
         const { msg_id, timestamp, direction, body } = rowData;
         return (
-             <MessageBubble
-                id={msg_id}
-                outOrIn={direction}
-                timestamp={timestamp}
-                body={body}
-             />
+            <CardSection>
+                <MessageBubble
+                    id={msg_id}
+                    outOrIn={direction}
+                    timestamp={timestamp}
+                    body={body}
+                />
+            </CardSection>
+             
         ); 
     }
 
@@ -35,8 +38,8 @@ class MessageList extends Component {
     render() {
         const styles = {
             MessageListStyle: {
-                flex: 12,
-                height: 200,
+                paddingBottom: 12,
+                flex: 16,
                 flexDirection: 'column-reverse',
             }
         };
@@ -48,10 +51,7 @@ class MessageList extends Component {
                 renderRow={this.renderRow.bind(this)}
             />
         ); 
-    }
-    
+    }   
 }
-
-
 
 export { MessageList }; 

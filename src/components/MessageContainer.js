@@ -4,10 +4,7 @@ import { connect } from 'react-redux';
 import { MessageList } from './common';
 
 class MessageContainer extends Component {
-    state = {
-        messages: null
-    }
-    
+
     render() {
         // const messages = [
         //     {

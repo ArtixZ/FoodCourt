@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { ChatBox } from './common';
 import { connect } from 'react-redux';
+
+import { ChatBox } from './common';
 import { messageSent } from '../actions';
 
 class ChatContainer extends Component {
