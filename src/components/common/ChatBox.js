@@ -25,6 +25,7 @@ const ChatBox = ({ value, onChangeText, placeholder, onSend }) => {
 
 const styles = {
   containerStyle: {
+    borderTopWidth: 2,
     height: 20,
     flex: 1,
     flexDirection: 'row',

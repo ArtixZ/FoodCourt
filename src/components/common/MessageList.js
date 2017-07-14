@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { ListView, Text, ScrollView } from 'react-native';
-import { MessageBubble, CardSection } from './';
+import InvertibleScrollView from 'react-native-invertible-scroll-view';
+
+import { MessageBubble } from './';
 
 class MessageList extends Component {
     constructor(props) {
@@ -22,16 +24,28 @@ class MessageList extends Component {
     renderRow(rowData) {
         const { msg_id, timestamp, direction, body } = rowData;
         return (
-            <CardSection>
-                <MessageBubble
-                    id={msg_id}
-                    outOrIn={direction}
-                    timestamp={timestamp}
-                    body={body}
-                />
-            </CardSection>
+            <MessageBubble
+                id={msg_id}
+                outOrIn={direction}
+                timestamp={timestamp}
+                body={body}
+            />
              
         ); 
+    }
+
+    renderScrollComponent(props) {
+        return (
+            <InvertibleScrollView
+                inverted
+                ref={cpt => this._invertibleScrollViewRef = cpt}
+                {...props}
+            />
+        );
+    }
+
+    scrollTo(options) {
+        this._invertibleScrollViewRef.scrollTo(options);
     }
 
 
@@ -39,16 +53,15 @@ class MessageList extends Component {
         const styles = {
             MessageListStyle: {
                 paddingBottom: 12,
-                flex: 16,
                 flexDirection: 'column-reverse',
             }
         };
         return (
             <ListView 
                 enableEmptySections
-                style={styles.MessageListStyle}
                 dataSource={this.state.dataSource}
                 renderRow={this.renderRow.bind(this)}
+                renderScrollComponent={this.renderScrollComponent.bind(this)}
             />
         ); 
     }   

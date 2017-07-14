@@ -10,6 +10,7 @@ const MessageBubble = ({ id, outOrIn, timestamp, body }) => {
         case 'txt': 
             return (
                 <Text 
+                    key={id}
                     style={{ ...textStyle, alignSelf: leftOrRight }}
                 >
                     {body.msg}
@@ -26,6 +27,8 @@ const MessageBubble = ({ id, outOrIn, timestamp, body }) => {
 
 const styles = {
     textStyle: {
+        minHeight: 40,
+        fontSize: 30
     }
 };
 

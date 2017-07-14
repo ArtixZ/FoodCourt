@@ -18,7 +18,7 @@ export default (state = INIT_STATE, action) => {
     switch (action.type) {
         case TXT_CHAT_MESSAGE:
             const message = generateTxtMsg(action.payload);
-            return [...state, message];
+            return [message, ...state];
         default: 
             return state;
     }
