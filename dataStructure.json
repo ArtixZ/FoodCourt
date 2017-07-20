@@ -24,12 +24,24 @@
 
     {
         "type": "card",
-        "payload": {
-            "pic": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/65e54a4a-fd0b-11e3-b821-ebde7b50cc4b",
-            "name": "Smith & Wollensky Rib-eye",
-            "suggestion": "Rich in Protein",
-            "price": 24.99
+        "pic": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/65e54a4a-fd0b-11e3-b821-ebde7b50cc4b",
+        "name": "Smith & Wollensky Rib-eye",
+        "suggestion": "Rich in Protein",
+        "price": 24.99
 
-        }
 
+    }
+
+
+
+    msg_id: `temp_${generateGuuId()}`,
+    timeStamp: moment().toISOString(),
+    direction: 'ingoing',
+    body: {
+        type: 'card',
+        "pic": "https://a1.easemob.com/easemob-demo/chatdemoui/chatfiles/65e54a4a-fd0b-11e3-b821-ebde7b50cc4b",
+        "name": "Smith & Wollensky Rib-eye",
+        'tags': ['Healthy', 'Salad'],
+        "suggestion": "Rich in Protein",
+        "price": 24.99
     }

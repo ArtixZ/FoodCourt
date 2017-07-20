@@ -9,9 +9,115 @@ const INIT_STATE = [{
     timeStamp: moment().toISOString(),
     direction: 'ingoing',
     body: {
-        type: 'txt',
-        msg: 'What can I get for you?'
-    }
+        type: 'card',
+        payload: [
+            {
+                "pic": "https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }
+        ]
+    },
+}, {
+    msg_id: `temp_${generateGuuId()}`,
+    timeStamp: moment().toISOString(),
+    direction: 'ingoing',
+    body: {
+        type: 'card',
+        payload: [
+            {
+                "pic": "https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/5317/food-salad-restaurant-person.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }
+        ]
+    },
+}, {
+    msg_id: `temp_${generateGuuId()}`,
+    timeStamp: moment().toISOString(),
+    direction: 'ingoing',
+    body: {
+        type: 'card',
+        payload: [
+            {
+                "pic": "https://static.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }, {
+                "pic": "https://static.pexels.com/photos/8500/food-dinner-pasta-spaghetti-8500.jpg",
+                "name": "Smith & Wollensky Rib-eye",
+                'tags': ['Healthy', 'Salad'],
+                "suggestion": "Rich in Protein",
+                "rating": 4,
+                "price": 24.99
+            }
+        ]
+    },
 }]
 
 export default (state = INIT_STATE, action) => {

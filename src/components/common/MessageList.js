@@ -52,12 +52,12 @@ class MessageList extends Component {
     render() {
         const styles = {
             MessageListStyle: {
-                paddingBottom: 12,
-                flexDirection: 'column-reverse',
+                marginBottom: 16
             }
         };
         return (
             <ListView 
+                style={styles.MessageListStyle}
                 enableEmptySections
                 dataSource={this.state.dataSource}
                 renderRow={this.renderRow.bind(this)}

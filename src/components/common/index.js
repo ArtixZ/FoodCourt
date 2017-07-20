@@ -8,3 +8,4 @@ export * from './Confirm';
 export * from './ChatBox';
 export * from './MessageList';
 export * from './MessageBubble';
+export * from './CardHorizontal';

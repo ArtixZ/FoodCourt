@@ -1,5 +1,7 @@
 import React  from 'react';
 import { Text } from 'react-native';
+import CardWrapper from '../wrappers/CardWrapper';
+import SwipCard from '../wrappers/SwipCard';
 
 const MessageBubble = ({ id, outOrIn, timestamp, body }) => {
     
@@ -19,7 +21,12 @@ const MessageBubble = ({ id, outOrIn, timestamp, body }) => {
         case 'img':
             console.log(type);
         case 'card':
-            console.log(type);
+            const { payload } = body;
+            return (
+                <SwipCard 
+                    cards = {payload}
+                />
+            );
         default:
             console.log(type);
     }
