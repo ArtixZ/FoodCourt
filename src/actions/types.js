@@ -10,3 +10,4 @@ export const EMPLOYEES_FETCH_SUCCESS = 'employees_fetch_success';
 export const EMPLOYEE_SAVE_SUCCESS = 'employee_save_success';
 
 export const TXT_CHAT_MESSAGE = 'TXT_CHAT_MESSAGE';
+export const TXT_RESPONSE_MESSAGE = 'TXT_RESPONSE_MESSAGE';

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { ChatBox } from './common';
-import { messageSent } from '../actions';
+import { messageSent, getResponse } from '../actions';
 
 class ChatContainer extends Component {
     state = {
@@ -17,6 +17,7 @@ class ChatContainer extends Component {
         if (this.state.inputVal) {
             this.props.messageSent(this.state.inputVal);        
             this.setState({ inputVal: null });
+            this.props.getResponse(this.state.inputVal);
         }
     }
 
@@ -34,5 +35,5 @@ class ChatContainer extends Component {
 
 
 export default connect(null, {
-    messageSent
+    messageSent, getResponse
 })(ChatContainer);

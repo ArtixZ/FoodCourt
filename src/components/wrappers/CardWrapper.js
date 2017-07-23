@@ -4,7 +4,7 @@ import { View, Text, Image } from 'react-native';
 import { CardHorizontal, CardSection } from '../common';
 
 
-const CardWrapper = ({ thumbnail_image, foodName, tags, suggestion, rating, price }) => {
+const CardWrapper = ({ thumbnail_image, foodName, tags, suggestion, rating, price, highlights, distance }) => {
 
     const { thumbnailStyle, thumbnailContainerStyle, contentStyle } = styles;
 
@@ -22,7 +22,8 @@ const CardWrapper = ({ thumbnail_image, foodName, tags, suggestion, rating, pric
                 <View style={contentStyle}>
                     <Text>{foodName}</Text>
                     <Text>{rating}</Text>
-                    <Text>{tags}</Text>
+                    <Text>{highlights.toString()}</Text>
+                    <Text>{`${distance} mi`}</Text>
                     <Text>{`$${price}`}</Text>
                 </View>
             <CardSection>

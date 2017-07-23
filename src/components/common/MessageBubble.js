@@ -35,7 +35,7 @@ const MessageBubble = ({ id, outOrIn, timestamp, body }) => {
 const styles = {
     textStyle: {
         minHeight: 40,
-        fontSize: 30
+        fontSize: 24
     }
 };
 

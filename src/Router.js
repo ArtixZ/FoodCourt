@@ -16,7 +16,7 @@ const RouterComponent = () => {
 
       <Scene key="main">
         <Scene
-          onRight={() => Actions.refresh()}
+          onRight={() => Actions.chatRoom()}
           rightTitle="Refresh"
           key="chatRoom"
           component={ChatUI}

@@ -40,16 +40,18 @@ export default class extends Component {
                     loadMinimal
                     loadMinimalSize={1}
                     style={styles.wrapper}
-                    height={240}
+                    height={140}
                     loop={false}
                 >
                     {
                         cards.map((card, i) => {
-                            const { pic, name, tags, suggestion, rating, price } = card;
+                            const { pic, name, tags, distance, highlights, suggestion, rating, price } = card;
                             return (<CardWrapper
                                         key={i}
                                         thumbnail_image={pic}
                                         foodName={name}
+                                        distance={distance}
+                                        highlights={highlights}
                                         tags={tags}
                                         suggestion={suggestion}
                                         rating={rating}
